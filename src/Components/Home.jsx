@@ -152,7 +152,7 @@ const Home = () => {
 
       {/* ================= Footer ================= */}
       <footer className="bg-indigo-900 text-white py-6 text-center">
-        <p>© 2026 AntiGravity Learning Platform. All Rights Reserved.</p>
+        <p>© All Rights Reserved.</p>
       </footer>
     </div>
   );
