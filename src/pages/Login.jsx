@@ -26,7 +26,7 @@ const Signup = () => {
     // Don't generate OTP again if already registered
     if (!localStorage.getItem("otp")) {
       const generatedOtp = Math.floor(
-        100000 + Math.random() * 900000
+        100000 + Math.random() * 900000,
       ).toString();
 
       localStorage.setItem("otp", generatedOtp);
@@ -34,7 +34,7 @@ const Signup = () => {
 
     localStorage.setItem("userEmail", email);
 
-    alert("Registration Successful!");
+    alert("Registration Successful! For OTP see Local Storage");
 
     setShowOtp(true);
   };
@@ -58,9 +58,7 @@ const Signup = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 flex justify-center items-center">
-
       <div className="bg-white w-[420px] rounded-2xl shadow-2xl p-8">
-
         <h1 className="text-4xl font-bold text-center text-blue-600">
           JS Learning App
         </h1>
@@ -70,10 +68,7 @@ const Signup = () => {
         </p>
 
         <form onSubmit={handleRegister}>
-
-          <label className="font-semibold">
-            Email Address
-          </label>
+          <label className="font-semibold">Email Address</label>
 
           <input
             type="email"
@@ -92,15 +87,11 @@ const Signup = () => {
               Register
             </button>
           )}
-
         </form>
 
         {showOtp && (
           <div>
-
-            <label className="font-semibold">
-              Enter OTP
-            </label>
+            <label className="font-semibold">Enter OTP</label>
 
             <input
               type="text"
@@ -116,12 +107,9 @@ const Signup = () => {
             >
               Verify OTP
             </button>
-
           </div>
         )}
-
       </div>
-
     </div>
   );
 };
